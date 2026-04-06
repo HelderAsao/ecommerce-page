@@ -8,11 +8,11 @@ type AddToCartProps = {
     count: number,
     handleDecrementButton: () => void,
     handleIncrementButton: () => void,
-    handleAddtoCart: () => void,
+    handleAddToCart: () => void,
     resetCount: () => void
 }
 
-const AddToCart =({ count, handleDecrementButton, handleIncrementButton, handleAddtoCart, resetCount }:AddToCartProps) =>{
+const AddToCart =({ count, handleDecrementButton, handleIncrementButton, handleAddToCart, resetCount }:AddToCartProps) =>{
 
 
     return(
@@ -33,7 +33,7 @@ const AddToCart =({ count, handleDecrementButton, handleIncrementButton, handleA
                         <div className=' flex items-center justify-center mt-2 px-6 md:px-0 md:mt-0 md:w-2/4'>
                             <button className=' flex h-10 border items-center rounded-md w-full bg-orange-400 justify-center gap-3 text-black cursor-pointer transition-all duration-200 ease-in-out hover:bg-orange-500 hover:shadow-md active:scale-95'
                                 onClick={() => {
-                                    handleAddtoCart()
+                                    handleAddToCart()
                                     resetCount()
                                 }}>
                                 <img src={Cart} alt="cart" className=' w-4 h-4' />

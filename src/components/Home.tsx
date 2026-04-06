@@ -10,7 +10,10 @@ import ProductInfo from './ProductInfo'
 import AddToCart from './AddToCart'
 import Gallery from './Gallery'
 import SideBar from './SideBar'
-import { getTotalPrice } from '../utils/GetTotalPrice'
+import useCart from '../hooks/useCart'
+import { getTotalPrice } from '../utils/getTotalPrice'
+
+
 
 const Home = () => {
 
@@ -21,7 +24,7 @@ const Home = () => {
 
         const handleClickOutside = (e) => {
 
-            if (cartRef.current && !cartRef.current.contains(e.target)) {
+            if (cartRef.current && !cartRef.current.contains(e.target )) {
 
                 setIsCartOpen(false)
             }
@@ -34,8 +37,8 @@ const Home = () => {
         }
     }, [])
 
-    const [count, setCount] = useState(0);
-    const [cartItems, setCartItems] = useState(0);
+    const { count, cartItems, handleIncrementButton, handleDecrementButton, handleAddToCart, resetCount, resetCart } = useCart()
+
     const [isCartOpen, setIsCartOpen] = useState(false)
     const [shoes, setShoes] = useState(0)
     const [isLightboxOpen, setIsLightboxOpen] = useState(false)
@@ -48,7 +51,7 @@ const Home = () => {
         Shoes4
     ]
 
-    const toogleSideBar = () => {
+    const toggleSideBar = () => {
         setIsSidebarOpen(prev => !prev)
     }
 
@@ -64,26 +67,6 @@ const Home = () => {
         setIsCartOpen(prev => !prev)
     }
 
-    const handleAddtoCart = () => {
-        setCartItems(prev => prev + count)
-    }
-
-    const resetCart = () => {
-        setCartItems(0)
-    }
-
-    const resetCount = () => {
-        setCount(0)
-    }
-
-    const handleIncrementButton = () => {
-        setCount(prev => prev + 1)
-    }
-    const handleDecrementButton = () => {
-        if (count === 0) return;
-        setCount(prev => prev - 1)
-
-    }
 
     return (
         <div className=''>
@@ -110,7 +93,7 @@ const Home = () => {
                 resetCart={resetCart}
                 chosenShoes={chosenShoes}
                 shoes={shoes}
-                toggleSidebar={toogleSideBar}
+                toggleSidebar={toggleSideBar}
             />
 
             {/* menu lateral */}
@@ -139,7 +122,7 @@ const Home = () => {
                             count={count}
                             handleDecrementButton={handleDecrementButton}
                             handleIncrementButton={handleIncrementButton}
-                            handleAddtoCart={handleAddtoCart}
+                            handleAddToCart={handleAddToCart}
                             resetCount={resetCount}
                         />
 

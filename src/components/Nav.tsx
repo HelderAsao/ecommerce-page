@@ -8,7 +8,7 @@ import type React from 'react'
 
 type NavProps = {
     cartRef: React.RefObject<HTMLDivElement | null>,
-    toggleCartOpen: () => void, //averiguar
+    toggleCartOpen: () => void, 
     isCartOpen: boolean,
     cartItems: number,
     getTotalPrice: () => number,
