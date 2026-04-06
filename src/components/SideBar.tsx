@@ -1,4 +1,4 @@
-import IconClose from '../../public/images/icon-close.svg'
+import IconClose from '/images/icon-close.svg'
 
 type SideBarProps = {
     isSidebarOpen: boolean,

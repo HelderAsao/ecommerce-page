@@ -1,5 +1,5 @@
 const getTotalPrice = (cartItems: number) => {
-    return cartItems * 2
+    return cartItems * 125
 }
 
 export {getTotalPrice}

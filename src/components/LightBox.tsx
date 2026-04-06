@@ -1,10 +1,10 @@
-import IconClose from '../../public/images/icon-close.svg'
-import IconPrevious from '../../public/images/icon-previous.svg'
-import IconNext from '../../public/images/icon-next.svg'
-import Shoes1Thumbnail from '../../public/images/image-product-1-thumbnail.jpg'
-import Shoes2Thumbnail from '../../public/images/image-product-2-thumbnail.jpg'
-import Shoes3Thumbnail from '../../public/images/image-product-3-thumbnail.jpg'
-import Shoes4Thumbnail from '../../public/images/image-product-4-thumbnail.jpg'
+import IconClose from '/images/icon-close.svg'
+import IconPrevious from '/images/icon-previous.svg'
+import IconNext from '/public/images/icon-next.svg'
+import Shoes1Thumbnail from '/images/image-product-1-thumbnail.jpg'
+import Shoes2Thumbnail from '/images/image-product-2-thumbnail.jpg'
+import Shoes3Thumbnail from '/images/image-product-3-thumbnail.jpg'
+import Shoes4Thumbnail from '/images/image-product-4-thumbnail.jpg'
 
 type LightBoxProps = {
     isLightboxOpen: boolean,

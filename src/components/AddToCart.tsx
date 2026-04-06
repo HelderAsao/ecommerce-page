@@ -1,6 +1,6 @@
-import Cart from '../../public/images/icon-cart.svg'
-import Minus from '../../public/images/icon-minus.svg'
-import Plus from '../../public/images/icon-plus.svg'
+import Cart from '/images/icon-cart.svg'
+import Minus from '/images/icon-minus.svg'
+import Plus from '/images/icon-plus.svg'
 
 
 

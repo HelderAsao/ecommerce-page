@@ -1,9 +1,9 @@
 
-import IconMenu from '../../public/images/icon-menu.svg'
-import Logo from '../../public/images/logo.svg'
-import Cart from '../../public/images/icon-cart.svg'
-import Avatar from '../../public/images/image-avatar.png'
-import IconDelete from '../../public/images/icon-delete.svg'
+import IconMenu from '/images/icon-menu.svg'
+import Logo from '/images/logo.svg'
+import Cart from '/images/icon-cart.svg'
+import Avatar from '/images/image-avatar.png'
+import IconDelete from '/images/icon-delete.svg'
 import type React from 'react'
 
 type NavProps = {
@@ -11,7 +11,7 @@ type NavProps = {
     toggleCartOpen: () => void, 
     isCartOpen: boolean,
     cartItems: number,
-    getTotalPrice: () => number,
+    getTotalPrice: (cartItems: number) => number,
     resetCart: () => void,
     chosenShoes: string[],
     shoes: number,
@@ -21,6 +21,7 @@ type NavProps = {
 
 const Nav = ({ cartRef, toggleCartOpen, isCartOpen, cartItems, getTotalPrice, resetCart, chosenShoes, shoes, toggleSidebar }:NavProps) => {
 
+    console.log('cartItems:', cartItems)
 
     return (
         <div>
@@ -73,7 +74,7 @@ const Nav = ({ cartRef, toggleCartOpen, isCartOpen, cartItems, getTotalPrice, re
                                                 <div className='flex gap-2'>
                                                     <p>$125.00 x {cartItems}</p>
 
-                                                    <p className='font-bold text-black'>${getTotalPrice().toFixed(2)}</p>
+                                                    <p className='font-bold text-black'>${getTotalPrice(cartItems).toFixed(2)}</p>
                                                 </div>
                                             </div>
                                             <img src={IconDelete} alt="ícone lixeira" className='h-4 cursor-pointer' onClick={(e) => {
