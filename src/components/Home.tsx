@@ -76,10 +76,7 @@ const Home = () => {
                 isLightboxOpen={isLightboxOpen}
                 chosenShoes={chosenShoes}
                 shoes={shoes}
-                setShoes={setShoes}
                 setIsLightboxOpen={setIsLightboxOpen}
-                handlePreviousArrow={handlePreviousArrow}
-                handleNextArrow={handleNextArrow}
 
             />
 
