@@ -22,9 +22,9 @@ const Home = () => {
 
     useEffect(() => {
 
-        const handleClickOutside = (e) => {
+        const handleClickOutside = (e:MouseEvent) => {
 
-            if (cartRef.current && !cartRef.current.contains(e.target )) {
+            if (cartRef.current && !cartRef.current.contains(e.target as Node )) {
 
                 setIsCartOpen(false)
             }
