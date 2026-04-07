@@ -2,6 +2,10 @@
 
 Aplicação de página de produto desenvolvida em React que permite visualizar imagens do produto, selecionar quantidade, adicionar itens ao carrinho e visualizar o total da compra.
 
+# Deploy
+Acesse o projeto online:
+https://ecommerce-page-mauve.vercel.app/
+
 ## 🛠 Tecnologias Utilizadas
 - React
 - JavaScript (ES6+)
